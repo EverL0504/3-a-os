@@ -1,0 +1,88 @@
+/* Fondo general */
+body {
+    background-color: #f2e1d1;  /* Color suave que complementa las fotos */
+    font-family: Arial, sans-serif;
+    color: #333;  /* Texto en color oscuro para buen contraste */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Para evitar que los corazones animados salgan del área visible */
+}
+
+/* Corazones flotantes animados */
+@keyframes floatHeart {
+    0% { transform: translateY(0) rotate(0); opacity: 1; }
+    50% { transform: translateY(-50px) rotate(180deg); opacity: 0.8; }
+    100% { transform: translateY(0) rotate(360deg); opacity: 1; }
+}
+
+/* Estilo de los corazones flotantes */
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: #e74c3c;  /* Rojo para los corazones */
+    animation: floatHeart 4s infinite;
+    pointer-events: none;
+}
+
+/* Contenedor del juego */
+#game-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para resaltar el contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    max-width: 800px;  /* Máximo ancho para evitar que se estire demasiado */
+    margin: 20px auto;  /* Centrado en la página */
+    padding-bottom: 40px;
+}
+
+/* Estilo para las imágenes decorativas */
+.decorative-image {
+    width: 200px;  /* Ajusta el tamaño según lo desees */
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para las imágenes */
+}
+
+/* Estilo para el mensaje de recompensa */
+.reward-message {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor de la pregunta */
+#question-container {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón y otros elementos */
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

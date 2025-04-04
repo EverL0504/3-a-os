@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Aniversario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Corazones flotantes -->
+    <div class="heart" style="top: 10%; left: 20%;">❤️</div>
+    <div class="heart" style="top: 30%; left: 50%;">❤️</div>
+    <div class="heart" style="top: 60%; left: 70%;">❤️</div>
+    <div class="heart" style="top: 80%; left: 10%;">❤️</div>
+    <div class="heart" style="top: 40%; left: 80%;">❤️</div>
+    
+    <!-- Contenedor del juego -->
+    <div id="game-container">
+        <h1>Juego del Aniversario</h1>
+
+        <!-- Contenedor de la pregunta -->
+        <div id="question-container">
+            <p id="message">¡Bienvenida a tu juego de aniversario! Responde las pistas.</p>
+            <p id="question"></p>
+            <input type="text" id="answer" placeholder="Escribe tu respuesta aquí">
+            <button onclick="checkAnswer()">Comprobar respuesta</button>
+        </div>
+
+        <!-- Contenedor del siguiente botón -->
+        <div id="next-button-container" style="display:none;">
+            <button onclick="nextPista()">Siguiente Pista</button>
+        </div>
+    </div>
+
+    <!-- Contenedor para el código QR -->
+    <div id="qr-container" style="margin-top: 20px;">
+        <h2>Escanea este QR para acceder al sitio:</h2>
+        <div id="qrcode"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
